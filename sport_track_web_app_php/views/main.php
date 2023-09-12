@@ -1,8 +1,8 @@
 <?php include __ROOT__."/views/header.html"; ?>
-<h1> Main page</h1>
-<a href="/connect">Click here to display the connection form.</a>
+<h2 class="text-center"> Main page</h2>
+<a href="/connect">Sign in.</a>
 <br>
-<a href="/user_add">Click here to display the user add form.</a>
+<a href="/user_add">Sign up</a>
 <br>
 <?php 
 if($_SESSION['mail'] != null && $_SESSION['pswd'] != null){
