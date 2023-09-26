@@ -1,6 +1,6 @@
 <?php
 
-include __ROOT__."/views/header.html";
+include __ROOT__."/views/header.php";
 
 echo "Lastname =". $data['lastname'];
 echo "<br>";

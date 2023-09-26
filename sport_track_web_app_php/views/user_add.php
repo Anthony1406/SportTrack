@@ -1,27 +1,50 @@
-<?php include __ROOT__."/views/header.html"; ?>
-
-<form action="/user_add" method="post">
-<label for="fname">Nom :</label><br>
-<input type="text" id="Nom" name="firstname" required autofocus><br>
-<label for="fname">Prénom :</label><br>
-<input type="text" id="Prenom" name="lastname" required><br>
-  <label for="email">Email :</label><br>
-  <input type="email" id="email" name="mail"  required><br>
-  <label for="pwd">Password :</label><br>
-  <input type="password" id="pwd" name="pswd"  required><br>
-  <label>Sexe</label> :<br>
-  <input type="text" name="sexe" required><br>
-  <label for="Poids">Poids :</label><br>
-  <input type="number" id="Poids" name="weight"  placeholder="Kg"  required><br>
-
-  <label for="Taille">Taille :</label><br>
-  <input type="number" id="taille" name="height"  placeholder="Cm" required><br>
-
-  <label for="birthday">Date de naissance :</label><br>
-  <input type="date" id="birthday" name="birthdate"  required><br>
-  <br>
-  <input type="submit" value="Valider"><br>
-
-</form>
-            
+<?php include __ROOT__."/views/header.php"; ?>
+<main class="d-flex flex-column justify-content-center align-items-center vh-100">
+  <section class="my-3 p-4 bg-white rounded-4 shadow w-50 mx-auto">
+    <h2>S'enregistrer</h2>
+    <hr>
+    <form action="/user_add" method="post" class="row row-cols-2 mt-3">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nom</label>
+        <input type="text" id="name" class="form-control" placeholder="Nom" name="firstname" required>
+      </div>
+      <div class="mb-3">
+        <label for="surname" class="form-label">Prénom</label>
+        <input type="text" id="surname" class="form-control" placeholder="Prénom" name="lastname" required>
+      </div>
+      <div class="mb-3">
+        <label for="birthdate" class="form-label">Date de Naissance</label>
+        <input type="date" id="birthdate" class="form-control" name="birthdate" required>
+      </div>
+      <div class="mb-3">
+        <label for="sex" class="form-label">Sexe</label>
+        <select id="sex" class="form-control form-control-sm" name="sexe" required>
+          <option selected="selected">Homme</option>
+          <option>Femme</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="height" class="form-label">Taille (en centimètres)</label>
+        <input type="number" id="height" class="form-control" placeholder="0" min="0" name="height" required/>
+      </div>
+      <div class="mb-3">
+        <label for="weight" class="form-label">Poids (en kg)</label>
+        <input type="number" id="weight" class="form-control" placeholder="0" min="0" name="weight" required/>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Adresse Email</label>
+        <input type="email" id="email" class="form-control" placeholder="nom.e0000000@etud.univ-ubs.fr" name="mail" required>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Mot de Passe</label>
+        <input type="password" id="password" class="form-control" placeholder="Mot de passe" name="pswd" required>
+      </div>
+      <div class="text-center d-flex flex-column justify-content-around align-items-center w-100 mt-4">
+        <button type="submit" class="btn btn-primary w-50">S'enregistrer</button>
+        <p class="mt-2">Vous avez déjà un compte? <a href="/connect">Se connecter</a></p>
+      </div>
+    </form>
+  </section>
+</main>
 <?php include __ROOT__."/views/footer.html"; ?>

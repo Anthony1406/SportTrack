@@ -1,4 +1,4 @@
-<?php include __ROOT__."/views/header.html"; ?>
+<?php include __ROOT__."/views/header.php"; ?>
 
 <form action="/connect" method="post">
   <label>Prénom :</label><br>

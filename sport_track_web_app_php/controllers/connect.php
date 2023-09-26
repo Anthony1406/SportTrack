@@ -12,7 +12,7 @@ class ConnectController extends Controller{
         $pdo = UtilisateurDAO::getInstance()->find($request['mail'],$request['pswd']);
         $isEmply = empty($pdo);
         if ($isEmply == 1) {
-            $this->render('user_error',[]);
+            $this->render('error',["connect"]);
         } else {
             session_start();
             $_SESSION['mail'] = $request['mail'];
